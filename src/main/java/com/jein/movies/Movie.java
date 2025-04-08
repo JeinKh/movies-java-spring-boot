@@ -15,10 +15,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Movie {
-    static String genre = getDefaultGenre(); // if getDefaultGenre() throws an exception...
-    static String getDefaultGenre() {
-        throw new RuntimeException("Oops"); // triggers ExceptionInInitializerError
-    }
     @Id
     private ObjectId id;
     private String imdbId;
